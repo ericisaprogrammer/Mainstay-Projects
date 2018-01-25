@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="styles.css" rel="Stylesheet"/>
+  <title>Overwatch</title>
+</head>
+<body>
+  <!-- Header section, which contains the top navigation menu and secondary
+       navigation menu, which follows the screen view. -->
+  <div class="section" id="sec-header">                                               <!-- Start header -->
+    <div class="nav-item logo" id="head-logo">BLIZZARD</div>
+    <div class="nav-item" id="head-games">Games</div>
+    <div class="nav-item" id="head-shop">Shop</div>
+    <div class="nav-item" id="head-news">News</div>
+    <div class="nav-item" id="head-esports">Esports</div>
+    <div class="nav-item support" id="head-support">Support</div>
+    <div class="nav-item" id="head-account">My Account</div>
+  </div>                                                                              <!-- End header -->
+  <!-- Video seection, which is the background of the top section for the webpage. -->
+  <div class="section" id="sec-video">                                                <!-- Start video -->
+    <div class="container" id="vid-intro-container">
+      <img src="images/intro-background.png" id="vid-intro-substitute">
+      <video loop muted autoplay poster="images/intro-video-frame.jpg" id="vid-intro">
+        <source src="videos/intro-video.webm" type="video/webm">
+        <source src="videos/intro-video.mp4" type="video/mp4">
+      </video>
+      <div class="container" id="vid-video-elements-container">
+        <h2 class="title white"id="vid-review">"Game of the year" - IGN</h2>
+        <button class="back-orange white" id="vid-buy">Buy Now</button>
+        <button class="back-white black" id="vid-trailer">Watch Trailer</button>
+        <img class="console-item" id="vid-xbone" src="images/intro-xbone.png" alt="XBox One">
+        <img class="console-item" id="vid-ps4" src="images/intro-ps4.png" alt="PS 4">
+        <p class="console-item" id="vid-pc">PC</p>
+        <img class="award-item" id="vid-award" src="images/intro-goty.png" alt="100 GOTY Awards">
+      </div>
+    </div>
+  </div>                                                                              <!-- End video -->
+  <!-- News section, which contains links to the featured news and all news. -->
+  <div class="section" id="sec-news">                                                 <!-- Start news -->
+    <h2 class="dark-blue">Featured News</h2>
+    <div class="nav-item" id="news-article1">123</div>
+    <div class="nav-item" id="news-article2">123</div>
+    <div class="nav-item" id="news-article3">123</div>
+    <button class="back-blue white" id="news-all">View All News</button>
+  </div>                                                                              <!-- End news -->
+  <!-- Synopsis section, which describes what the plot of the game is in brief.
+       Contains auto-changing picture backgrounds -->
+  <div class="section" id="sec-synopsis">                                             <!-- Start synopsis -->
+    <h1 class="white" id="syn-title">Fight for the future</h1>
+    <p>Soldiers. Scientists. Adventurers. Oddities. <br/>
+      <br/>
+      In a time of global crisis, an internation task
+      force of heroes banded together to restore
+      peace to a war-torn world: OVERWATCH <br/>
+      <br/>
+      Overwatch ended the crisis, and helped maintain
+      peace in the decades that followed,inspiring an
+      era of exploration, innovation, and discovery.
+      But, after many years, Overwatch’s influence waned,
+      and it was eventually disbanded. <br/>
+      <br/>
+      Now, conflict is rising across the world again, and
+      the call has gone out to heroes old and new. Are you with us?<br/>
+      <br/>
+    </p>
+    <button class="back-orange white">Explore the Game</button>
+  </div>                                                                              <!-- End synopsis -->
+  <!-- Hero section, which displays pictures and descriptions of each hero in brief,
+       along with a collection of icons to hover over and show each one. -->
+  <div class="section" id="sec-hero">                                                 <!-- Start hero -->
+    <h1 class="dark-blue">The world needs heroes</h1>
+    <p class="dark-blue">Choose your hero and clash on the battle fields
+      of tomorrow. Bend time, defy physics, and wield extraordinary
+      powers in the ultimate team-based shooter. </p> </br>
+    <div class="sub-section" id="sub-hero">
+      <div id="hero-picture">&#9786;</div>
+      <div id="hero-description">This is a smiley face. It could be anything,
+        but right now that's what it is.</div>
+    </div>
+    <div class="icon-container" id="hero-icons">
+      <div class="hero-icon template"></div>
+    </div>
+  </div>                                                                              <!-- End hero -->
+
+  <div class="section" id="background-window"> </div>
+
+  <!-- Order section, which contains an advertisment for the game, complete with
+       buy link. Has a window to background image. -->
+  <div class="section" id="sec-order">                                                <!-- Start order -->
+    <h1 class="dark-blue">Begin your watch</h1>
+    <p class="dark-blue">Clash on the battlefields of tomorrow in the
+      ultimate team-based shooter.</p>
+    <button class="back-orange white">Buy Now</button>
+    <img class="ord-pic" id="ord-xbone" src="images/ord-boxart-xbone.png" alt="XBox One"/>
+    <img class="ord-pic" id="ord-pc" src="images/ord-boxart-pc.png" alt="PC"/>
+    <img class="ord-pic" id="ord-ps4"src="images/ord-boxart-ps4.png" alt="PS 4"/>
+  </div>                                                                              <!-- End order -->
+  <!-- Social media section, which contains links to the game's social accounts,
+       including Facebook, Twitter, YouTube, and Instagram. -->
+  <div class="section" id="sec-social">                                               <!-- Start social -->
+    <h2 class="white">Stay connected</h2>
+    <button class="soc-icon" id="soc-facebook">Facebook</button>
+    <button class="soc-icon" id="soc-twitter">Twitter</button>
+    <button class="soc-icon" id="soc-youtube">YouTube</button>
+    <button class="soc-icon" id="soc-instagram">Instagram</button>
+  </div>                                                                              <!-- End social-->
+  <!-- Footer section, contains languages, logo, support links, trademarks,
+       and ESRB rating compliance. -->
+  <div class="section" id="sec-footer">
+    <select class="languages" id="foot-languages">
+      <option value="german">Deutsch</option>
+      <option selected = "selected" value="english-us">English (US)</option>
+      <option value="english-eu">English (EU)</option>
+      <option value="spanish-eu">Espa&ntilde;ol (EU)</option>
+      <option value="spanish-al">Espa&ntilde;ol (AL)</option>
+    </select>
+    <div class="logo" id="foot-logo">BLIZZARD</div>
+    <div class="bot-navigation">
+      <div class="nav-item" id="foot-careers">Careers</div>
+      <div class="nav-item" id="foot-about">About</div>
+      <div class="nav-item support" id="foot-support">Support</div>
+      <div class="nav-item" id="foot-press">Press</div>
+      <div class="nav-item" id="foot-api">API</div>
+    </div>
+    <div class="legal" id="foot-copyright">
+      ©2018 BLIZZARD ENTERTAINMENT, INC. ALL RIGHTS RESERVED. <br/>
+      All trademarks referenced herein are the properties of their respective owners.
+    </div>
+    <div class="bot-navigation legal">
+      <div class="nav-item" id="privacy">Privacy</div>
+      <div class="nav-item" id="terms">Terms</div>
+    </div>
+    <div class="esrb">
+      <img class="nav-item" id="esrb-privacy" src="images/foot-esrb-privacy.jpg" alt"ESRB Privacy Certification"/>
+      <img class="nav-item" id="esrb-rating" src="images/foot-esrb-rating.png" alt="ESRB Rated T for Teen"/>
+      <div class="nav-item" id="esrb-conditions">
+        <div class="contains" id="blood" title="Depictions of blood.">Blood</div>
+        <div class="contains" id="violence" title="Scenes invloving aggressive conflict. May contain bloodless dismemberment.">Violence</div>
+        <div class="contains" id="tobacco" title="The consumption of tobacco products">Use of Tobacco</div>
+        <div class="contains" id="interactions">Online Interactions Not <br/>Rated by the ESRB</div>
+      </div>      <!-- End esrb conditions -->
+    </div>      <!-- End esrb -->
+  </div>                                                                              <!-- End footer -->
+</body>
+</html>
