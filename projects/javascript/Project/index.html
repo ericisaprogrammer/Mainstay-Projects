@@ -2,21 +2,46 @@
 <html>
 <head>
   <link href="styles.css" rel="Stylesheet"/>
+  <link rel="shortcut icon" href="images/icons/site-favicon.ico"/>
   <title>Overwatch</title>
 </head>
 <body>
   <!-- Header section, which contains the top navigation menu and secondary
        navigation menu, which follows the screen view. -->
-  <div class="section" id="sec-header">                                               <!-- Start header -->
-    <div class="nav-item logo" id="head-logo">BLIZZARD</div>
-    <div class="nav-item" id="head-games">Games</div>
-    <div class="nav-item" id="head-shop">Shop</div>
-    <div class="nav-item" id="head-news">News</div>
-    <div class="nav-item" id="head-esports">Esports</div>
-    <div class="nav-item support" id="head-support">Support</div>
-    <div class="nav-item" id="head-account">My Account</div>
+  <div class="section" id="sec-header">                                                 <!-- Start header -->
+    <header class="nav" id="head-header">
+      <nav id="head-nav">
+        <div class="grid-container" id="grid-head-nav">
+          <div></div>
+          <a href="index.html" class="nav-item logo" id="head-logo">BLIZZARD</a>
+          <a href="index.html" class="nav-item" id="head-games">Games</a>
+          <a href="index.html" class="nav-item" id="head-shop">Shop</a>
+          <a href="index.html" class="nav-item" id="head-news">News</a>
+          <a href="index.html" class="nav-item" id="head-esports">Esports</a>
+          <div></div>
+          <a href="index.html" class="nav-item support" id="head-support">Support</a>
+          <a href="index.html" class="nav-item" id="head-account">My Account</a>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+    <nav class="nav" id="head-floating-nav">
+      <div class="grid-container" id="grid-floating-nav">
+        <a href="index.html" class="nav-item logo" id="head-logo">Game</a>
+        <a href="index.html" class="nav-item" id="head-games">Heroes</a>
+        <a href="index.html" class="nav-item" id="head-shop">Events</a>
+        <a href="index.html" class="nav-item" id="head-news">Media</a>
+        <a href="index.html" class="nav-item" id="head-esports">News</a>
+        <a href="index.html" class="nav-item support" id="head-support">Community</a>
+        <a href="index.html" class="nav-item" id="head-account">Esports</a>
+        <div></div>
+        <a href="index.html" class="nav-item" id="head-account">Search Bar</a>
+        <a href="index.html" class="nav-item" id="head-account">Login</a>
+        <button class="back-orange white" id="head-buy">Buy Now</button>
+      </div>
+    </nav>
   </div>                                                                              <!-- End header -->
-  <!-- Video seection, which is the background of the top section for the webpage. -->
+  <!-- Video section, which is the background of the top section for the webpage. -->
   <div class="section" id="sec-video">                                                <!-- Start video -->
     <div class="container" id="vid-intro-container">
       <img src="images/intro-background.png" id="vid-intro-substitute">
@@ -25,13 +50,28 @@
         <source src="videos/intro-video.mp4" type="video/mp4">
       </video>
       <div class="container" id="vid-video-elements-container">
-        <h2 class="title white"id="vid-review">"Game of the year" - IGN</h2>
-        <button class="back-orange white" id="vid-buy">Buy Now</button>
-        <button class="back-white black" id="vid-trailer">Watch Trailer</button>
-        <img class="console-item" id="vid-xbone" src="images/intro-xbone.png" alt="XBox One">
-        <img class="console-item" id="vid-ps4" src="images/intro-ps4.png" alt="PS 4">
-        <p class="console-item" id="vid-pc">PC</p>
-        <img class="award-item" id="vid-award" src="images/intro-goty.png" alt="100 GOTY Awards">
+        <div class="container" id="vid-top-elements">
+          <div id="filler"></div>
+          <img class="head-logo" id="head-main-logo" src="images/head-main-logo.png" alt="Overwatch"/>
+          <h2 class="title white"id="vid-review">"Game of the year" - IGN</h2>
+          <button class="back-orange white" id="vid-buy">Buy Now</button>
+          <button class="back-white black" id="vid-trailer">&#9658; Watch Trailer</button>
+        </div>
+        <div class="grid-container" id="vid-grid-bottom-elements">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="grid-container" id="vid-grid-console-elements">
+            <div></div>
+            <div></div>
+            <div></div>
+            <img class="console-item" id="vid-xbone" src="images/intro-xbone.png" alt="XBox One">
+            <img class="console-item" id="vid-ps4" src="images/intro-ps4.png" alt="PS 4">
+            <p class="console-item" id="vid-pc">PC</p>
+          </div>
+          <div></div>
+          <img class="award-item" id="vid-award" src="images/intro-goty.png" alt="100 GOTY Awards">
+        </div>
       </div>
     </div>
   </div>                                                                              <!-- End video -->
@@ -46,24 +86,29 @@
   <!-- Synopsis section, which describes what the plot of the game is in brief.
        Contains auto-changing picture backgrounds -->
   <div class="section" id="sec-synopsis">                                             <!-- Start synopsis -->
-    <h1 class="white" id="syn-title">Fight for the future</h1>
-    <p>Soldiers. Scientists. Adventurers. Oddities. <br/>
-      <br/>
-      In a time of global crisis, an internation task
-      force of heroes banded together to restore
-      peace to a war-torn world: OVERWATCH <br/>
-      <br/>
-      Overwatch ended the crisis, and helped maintain
-      peace in the decades that followed,inspiring an
-      era of exploration, innovation, and discovery.
-      But, after many years, Overwatch’s influence waned,
-      and it was eventually disbanded. <br/>
-      <br/>
-      Now, conflict is rising across the world again, and
-      the call has gone out to heroes old and new. Are you with us?<br/>
-      <br/>
-    </p>
-    <button class="back-orange white">Explore the Game</button>
+    <div class="container" id="syn-container">
+      <div></div>
+      <h1 class="white" id="syn-title">Fight for the future</h1>
+      <p class="white">Soldiers. Scientists. Adventurers. Oddities. <br/>
+        <br/>
+        In a time of global crisis, an internation task
+        force of heroes banded together to restore
+        peace to a war-torn world: OVERWATCH <br/>
+        <br/>
+        Overwatch ended the crisis, and helped maintain
+        peace in the decades that followed,inspiring an
+        era of exploration, innovation, and discovery.
+        But, after many years, Overwatch’s influence waned,
+        and it was eventually disbanded. <br/>
+        <br/>
+        Now, conflict is rising across the world again, and
+        the call has gone out to heroes old and new. Are you with us?<br/>
+        <br/>
+      </p>
+      <div></div>
+      <button class="back-orange white">Explore the Game</button>
+      <div></div>
+    </div>
   </div>                                                                              <!-- End synopsis -->
   <!-- Hero section, which displays pictures and descriptions of each hero in brief,
        along with a collection of icons to hover over and show each one. -->
@@ -78,22 +123,35 @@
         but right now that's what it is.</div>
     </div>
     <div class="icon-container" id="hero-icons">
-      <div class="hero-icon template"></div>
+      <div class="hero-icon"></div>
     </div>
   </div>                                                                              <!-- End hero -->
+
 
   <div class="section" id="background-window"> </div>
 
   <!-- Order section, which contains an advertisment for the game, complete with
        buy link. Has a window to background image. -->
   <div class="section" id="sec-order">                                                <!-- Start order -->
-    <h1 class="dark-blue">Begin your watch</h1>
-    <p class="dark-blue">Clash on the battlefields of tomorrow in the
-      ultimate team-based shooter.</p>
-    <button class="back-orange white">Buy Now</button>
-    <img class="ord-pic" id="ord-xbone" src="images/ord-boxart-xbone.png" alt="XBox One"/>
-    <img class="ord-pic" id="ord-pc" src="images/ord-boxart-pc.png" alt="PC"/>
-    <img class="ord-pic" id="ord-ps4"src="images/ord-boxart-ps4.png" alt="PS 4"/>
+    <div class="grid-container" id="ord-grid-container-main">
+      <div></div>
+      <img id="ord-widowmaker" src="images/widowmaker.png" alt="Widowmaker">
+      <div class="container" id="ord-container-elements">
+        <h1 class="dark-blue">Begin your watch</h1>
+        <p class="dark-blue">Clash on the battlefields of tomorrow in the
+          ultimate team-based shooter.</p>
+        <button class="back-orange white">Buy Now</button>
+        <div class="grid-container" id="ord-game-boxart">
+          <div></div>
+          <div></div>
+          <div></div>
+          <img class="ord-pic" id="ord-xbone" src="images/ord-boxart-xbone.png" alt="XBox One"/>
+          <img class="ord-pic" id="ord-pc" src="images/ord-boxart-pc.png" alt="PC"/>
+          <img class="ord-pic" id="ord-ps4"src="images/ord-boxart-ps4.png" alt="PS 4"/>
+        </div>
+      </div>
+      <div></div>
+    </div>
   </div>                                                                              <!-- End order -->
   <!-- Social media section, which contains links to the game's social accounts,
        including Facebook, Twitter, YouTube, and Instagram. -->
@@ -141,5 +199,61 @@
       </div>      <!-- End esrb conditions -->
     </div>      <!-- End esrb -->
   </div>                                                                              <!-- End footer -->
+  <script>
+    const mainNav = document.querySelector("#head-nav");
+    const sizeOfNav = mainNav.offsetHeight;
+    const floatingNav = document.querySelector("#head-floating-nav");
+
+    // Code for auto-changing background courtesy of CrocoDillon on css-tricks.com
+    const synopsis = document.querySelector("#sec-synopsis");
+    var current = 0;
+    var backgrounds = new Array(
+      'url("images/syn-background1.jpg")',
+      'url("images/syn-background2.jpg")',
+      'url("images/syn-background3.jpg")'
+    );
+
+    function nextBackground() {
+      synopsis.style.background = backgrounds[current = ++current % backgrounds.length];
+      synopsis.style.backgroundSize = "cover";
+      setTimeout(nextBackground, 5000);
+    }
+    // End code from CrocoDillon
+
+    function fixNav() {
+      if(window.scrollY <= sizeOfNav) {
+        mainNav.style.position = "fixed";
+        mainNav.style.transition = "all .2s";
+        floatingNav.style.top = (sizeOfNav + 10) + 'px';
+        document.querySelector("#head-header").style.height = "40px";
+      } else {
+        mainNav.style.position = "relative";
+        mainNav.style.transition = "all .2s";
+        floatingNav.style.top = 10 + "px";
+      }
+    }
+    fixNav()
+
+    window.addEventListener('scroll', fixNav);
+
+    /*   -------Code for when the icon hovering will be implemented
+    var icons = document.getElementsByClassName("hero-icon");
+    for(var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('mouseover', hoverOverHero());
+    }
+
+    function hoverOverHero() {
+       To be implemented. Will:
+          -Highlight hovered-over hero
+          -Unhighlight other, non-hovered-over Heroes
+          -Show picture and information for hovered-over hero
+          -Stay selected after hovering is done
+    }
+    */
+
+    synopsis.style.background = backgrounds[0];
+    synopsis.style.backgroundSize = "cover";
+    setTimeout(nextBackground, 5000);
+  </script>
 </body>
 </html>

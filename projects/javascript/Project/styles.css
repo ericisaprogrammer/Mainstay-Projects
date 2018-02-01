@@ -1,30 +1,156 @@
+:root {
+  --orange: #f4c416;
+  --grey: #f2f2f2;
+  --blue: #16b1ff;
+  --dark-blue: #3568ba;
+}
+
 .section {
   text-align: center;
   margin: 0 auto;
 }
 
 html {
-  background-color: #f2f2f2;
+  background-color: black;
+  width: 100%;
+}
+
+.back-orange {
+  background-color: var(--orange);
+}
+
+.back-blue {
+  background-color: var(--blue);
+}
+
+.back-white {
+  background-color: white;
+}
+
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}
+
+.dark-blue {
+  color: var(--dark-blue);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.grid-container {
+  display: grid;
+}
+
+#vid-video-elements-container {
+  display: grid;
+}
+
+#vid-grid-bottom-elements {
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr auto;
+  height: auto;
+}
+
+#vid-grid-console-elements {
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: 1fr auto
+}
+
+header {
+  transition: all .5s;
+}
+
+nav {
+  background: black;
+  top: 0;
+  width: 100%;
+  transition: all .5s;
+  position: relative;
+  z-index: 100;
+}
+
+.hidden-nav {
+  height: 0;
+  display: none;
+  transition: .5s;
+}
+
+#head-nav {
+  overflow-y: hidden;
+  height: 40px;
+	transition: .5s;
+}
+
+#head-floating-nav {
+  left: 10%;
+  background-color: rgba(0, 0, 0, .6);
+  padding: 10px;
+  position: fixed;
+  transition: all 0s;
+  border: 0;
+  margin: auto 0;
+  width: 80%;
+}
+
+#sec-social {
+  background-image: url("images/testing.jpg");
+}
+
+.fixed-nav {
+  position: fixed;
+}
+
+.back-white:hover{
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: solid white 2px;
+  transition: all .2s;
+}
+
+.back-blue:hover {
+  background-color: #36d1ff;
+  transition: all .2s;
+}
+
+.back-orange:hover {
+  background-color: #f4d416;
+  transition: all .2s;
 }
 
 body {
 	padding: 0;
 	margin: 0 auto;
 	color: Black;
-	background-color: WhiteSmoke;
+	background-color: var(--grey);
 }
 
 button {
   display: block;
   margin: 5px auto;
+  padding: 10px 20px 10px 20px;
+  min-width: 150px;
+  font-weight: bold;
+  font-size: 20px;
+  border-width: 0;
+  border-radius: 3px;
+}
+
+#head-buy {
+  font-size: 12px;
+  padding: auto;
+  min-width: auto;
+  height: 30px;
+  display: inline-block;
 }
 
 #sub-hero>div {
   display: inline-block;
-}
-
-.section {
-  border-style: solid;
 }
 
 .soc-icon {
@@ -44,9 +170,12 @@ button {
 }
 
 #background-window {
-  height: 250px;
-  background: none;
-  opacity: 0;
+  height: 300px;
+  background-image: url("images/back-rolling.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #vid-intro {
@@ -55,25 +184,36 @@ button {
 
 .console-item {
   font-family: Helvetica, Arial, Sans-Serif;
-  font-size: 15px;
-  color: #E0E0E0;
-  max-width: 100px;
+  font-size: 30px;
+  color: #F0F0F0;
+  max-width: 200px;
 }
 
 .award-item {
   max-width: 200px;
 }
 
-#back-rolling {
-  position: fixed;
-  height: auto;
-  width: 100%;
+.grid-container {
+  display: grid;
+}
+
+#filler {
+  height: 100px;
+}
+
+#head-main-logo {
+  max-width: 40%;
 }
 
 #vid-intro-substitute {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+
+#grid-head-nav {
+  grid-template-columns: 200px repeat(5, auto) 1fr repeat(2, auto) 200px;
+  line-height: 40px;
 }
 
 #sec-video {
@@ -89,6 +229,10 @@ button {
   align-items: center;
 }
 
+#sec-social {
+  border-top: solid #696969 3px;
+}
+
 #vid-video-elements-container {
   width: 100%;
   height: 100%;
@@ -96,6 +240,45 @@ button {
   top: 0;
   left: 0;
   z-index: 99;
+}
+
+#syn-container {
+  display: grid;
+  grid-auto-rows: 1fr;
+  height: 100%;
+  width: 40%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+#syn-container>button {
+  height: 40px;
+}
+
+#grid-floating-nav {
+  grid-template-columns: repeat(7, auto) 1fr repeat(3, auto);
+}
+
+a {
+  align-self: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+#ord-grid-container-main {
+  grid-template-columns: 1fr 1.2fr 1fr 1fr;
+}
+
+#ord-game-boxart>img {
+  height: auto;
+  width: 90%;
+}
+
+#ord-game-boxart {
+  grid-template-columns: .75fr 1fr .75fr;
+  grid-gap: 10px;
 }
 
 #esrb-conditions {
@@ -110,9 +293,14 @@ button {
 @media (min-width: 992px) {
   #vid-intro {
     display: block;
+    max-width: 100%;
   }
 
   #vid-intro-substitute {
     display: none;
   }
+}
+
+#sec-synopsis {
+  height: 600px;
 }
