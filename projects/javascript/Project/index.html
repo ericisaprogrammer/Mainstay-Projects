@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
   <link href="styles.css" rel="Stylesheet"/>
   <link rel="shortcut icon" href="images/icons/site-favicon.ico"/>
   <title>Overwatch</title>
@@ -78,9 +79,9 @@
   <!-- News section, which contains links to the featured news and all news. -->
   <div class="section" id="sec-news">                                                 <!-- Start news -->
     <h2 class="dark-blue">Featured News</h2>
-    <div class="nav-item" id="news-article1">123</div>
-    <div class="nav-item" id="news-article2">123</div>
-    <div class="nav-item" id="news-article3">123</div>
+    <a href="#"><img class="nav-item" id="news-article1" src="images/news-article1.png"/></a>
+    <a href="#"><img class="nav-item" id="news-article2" src="images/news-article2.png"/></a>
+    <a href="#"><img class="nav-item" id="news-article3" src="images/news-article3.png"/></a>
     <button class="back-blue white" id="news-all">View All News</button>
   </div>                                                                              <!-- End news -->
   <!-- Synopsis section, which describes what the plot of the game is in brief.
@@ -118,12 +119,36 @@
       of tomorrow. Bend time, defy physics, and wield extraordinary
       powers in the ultimate team-based shooter. </p> </br>
     <div class="sub-section" id="sub-hero">
-      <div id="hero-picture">&#9786;</div>
-      <div id="hero-description">This is a smiley face. It could be anything,
-        but right now that's what it is.</div>
-    </div>
-    <div class="icon-container" id="hero-icons">
-      <div class="hero-icon"></div>
+      <div class="grid-container" id="hero-information">
+        <div></div>
+        <div id="hero-picture">
+          <img class="hero-picture" id="hero-picture1" src="images/icons/hero-picture1.png" alt="Hand Pinch"/>
+          <img class="hero-picture hidden" id="hero-picture2" src="images/icons/hero-picture2.png" alt="Resize"/>
+          <img class="hero-picture hidden" id="hero-picture3" src="images/icons/hero-picture3.png" alt="Crown"/>
+          <img class="hero-picture hidden" id="hero-picture4" src="images/icons/hero-picture4.png" alt="Penguin"/>
+        </div>
+        <div id="hero-descriptors">
+          <div id="hero-title">
+            <h3 class="hero-title dark-blue" id="hero-title1">Hand Pinch</h3>
+            <h3 class="hero-title dark-blue hidden" id="hero-title2">Resize</h3>
+            <h3 class="hero-title dark-blue hidden" id="hero-title3">Crown</h3>
+            <h3 class="hero-title dark-blue hidden" id="hero-title4">Penguin</h3>
+          </div>
+          <div id="hero-description">
+            <p class="hero-description dark-blue" id="hero-description1">Pinchy hand, pinchy pinch pinch hand!</p>
+            <p class="hero-description dark-blue hidden" id="hero-description2">Behold, the true power of Ant Man: Being able to resize YouTube videos properly.</p>
+            <p class="hero-description dark-blue hidden" id="hero-description3">Whoever wears the crown gets to live forever, but they have to wear it all the time.</p>
+            <p class="hero-description dark-blue hidden" id="hero-description4">What sound does a penguin even make? Do you know? I sure as hell don't.</p>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div class="icon-container" id="hero-icons">
+        <div class="hero-icon hero-selected" id="hero-icon1">1</div>
+        <div class="hero-icon" id="hero-icon2">2</div>
+        <div class="hero-icon" id="hero-icon3">3</div>
+        <div class="hero-icon" id="hero-icon4">4</div>
+      </div>
     </div>
   </div>                                                                              <!-- End hero -->
 
@@ -156,7 +181,7 @@
   <!-- Social media section, which contains links to the game's social accounts,
        including Facebook, Twitter, YouTube, and Instagram. -->
   <div class="section" id="sec-social">                                               <!-- Start social -->
-    <h2 class="white">Stay connected</h2>
+    <h4 class="white">Stay connected</h4>
     <button class="soc-icon" id="soc-facebook">Facebook</button>
     <button class="soc-icon" id="soc-twitter">Twitter</button>
     <button class="soc-icon" id="soc-youtube">YouTube</button>
@@ -236,20 +261,41 @@
 
     window.addEventListener('scroll', fixNav);
 
-    /*   -------Code for when the icon hovering will be implemented
-    var icons = document.getElementsByClassName("hero-icon");
-    for(var i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener('mouseover', hoverOverHero());
+    //   -------Code for when the icon hovering will be implemented
+    var heroIcons = document.getElementsByClassName("hero-icon");
+    var heroPictures = document.getElementsByClassName("hero-picture");
+    var heroTitles = document.getElementsByClassName("hero-title");
+    var heroDescriptions = document.getElementsByClassName("hero-description");
+    for(var i = 0; i < heroIcons.length; i++) {
+      var icon = heroIcons[i];
+      icon.addEventListener('mouseover', function() {
+        hoverOverHero(this.id);
+      });
     }
 
-    function hoverOverHero() {
-       To be implemented. Will:
-          -Highlight hovered-over hero
-          -Unhighlight other, non-hovered-over Heroes
-          -Show picture and information for hovered-over hero
-          -Stay selected after hovering is done
+    function hoverOverHero(iconId) {
+      var iconNumber = Number(iconId.substring(iconId.length - 1));
+
+      // Remove selection from everything, hid everything
+      for(var i = 0; i < heroIcons.length; i++)
+        heroIcons[i].classList.remove("hero-selected");
+      for(var i = 0; i < heroPictures.length; i++)
+        heroPictures[i].classList.add("hidden");
+      for(var i = 0; i < heroTitles.length; i++)
+        heroTitles[i].classList.add("hidden");
+      for(var i = 0; i < heroDescriptions.length; i++)
+        heroDescriptions[i].classList.add("hidden");
+
+      var thisIcon = document.getElementById("hero-icon" + iconNumber);
+      var thisPicture = document.getElementById("hero-picture" + iconNumber);
+      var thisTitle = document.getElementById("hero-title" + iconNumber);
+      var thisDescription = document.getElementById("hero-description" + iconNumber);
+
+      thisIcon.classList.add("hero-selected");
+      thisPicture.classList.remove("hidden");
+      thisTitle.classList.remove("hidden");
+      thisDescription.classList.remove("hidden");
     }
-    */
 
     synopsis.style.background = backgrounds[0];
     synopsis.style.backgroundSize = "cover";

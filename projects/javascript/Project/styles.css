@@ -3,16 +3,64 @@
   --grey: #f2f2f2;
   --blue: #16b1ff;
   --dark-blue: #3568ba;
+  --shadow: #505050;
+}
+
+@font-face {
+  font-family: 'Big Noodle Titling Oblique';
+  src: url('fonts/BigNoodleTitling');
+  src:
+       url('fonts/BigNoodleTitling/big_noodle_titling_oblique.ttf') format('truetype'),
+       url('fonts/BigNoodleTitling/big_noodle_titling_oblique.eot') format('eot'),
+       url('fonts/BigNoodleTitling/big_noodle_titling_oblique.svg') format('svg');
+}
+
+html {
+  font-family: 'Ubuntu Condensed', Ariel, Sans-serif;
+  background-color: black;
+  width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Big Noodle Titling Oblique', Ariel, Sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3.5em;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+h4 {
+  font-size: 2.5em;
+}
+
+h5 {
+  font-size: 2em;
+}
+
+h6 {
+  font-size: 1.5em;
+}
+
+p.white {
+  font-size: 1em;
+  text-shadow:2px 2px 3px black;
+}
+
+h1,h3.white {
+  text-shadow: 2px 2px 3px var(--shadow);
 }
 
 .section {
   text-align: center;
   margin: 0 auto;
-}
-
-html {
-  background-color: black;
-  width: 100%;
 }
 
 .back-orange {
@@ -81,6 +129,42 @@ nav {
   transition: .5s;
 }
 
+.hero-picture {
+  max-height: 300px;
+  max-width: 300px;
+  display: inline-block;
+}
+
+.hero-title {
+  display: inline-block;
+}
+
+.hero-description {
+  display: inline-block;
+}
+
+.hero-icon {
+  height: 100px;
+  width: 75px;
+  border: solid black 1px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  font-size: 5em;
+}
+
+.hero-selected {
+  background-color: var(--orange);
+  color: black;
+  border: solid var(--blue) 1px;
+}
+
+#hero-information {
+  grid-template-columns: 1fr auto auto 1fr;
+}
+
 #head-nav {
   overflow-y: hidden;
   height: 40px;
@@ -146,10 +230,6 @@ button {
   padding: auto;
   min-width: auto;
   height: 30px;
-  display: inline-block;
-}
-
-#sub-hero>div {
   display: inline-block;
 }
 
@@ -265,6 +345,7 @@ a {
   padding-right: 10px;
   font-size: 20px;
   color: white;
+  text-decoration: none !important;
 }
 
 #ord-grid-container-main {
@@ -301,6 +382,14 @@ a {
   }
 }
 
+a:hover {
+  color: var(--orange);
+}
+
 #sec-synopsis {
   height: 600px;
+}
+
+.hidden {
+  display: none;
 }
