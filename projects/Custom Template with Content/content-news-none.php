@@ -1,0 +1,1 @@
+    <p class="dark-blue">There is no news.</p>

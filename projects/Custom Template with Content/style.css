@@ -1,0 +1,425 @@
+:root {
+  --orange: #f4c416;
+  --grey: #f2f2f2;
+  --blue: #16b1ff;
+  --dark-blue: #3568ba;
+  --shadow: #505050;
+}
+
+@font-face {
+  font-family: 'Big Noodle Titling Oblique';
+  src: url('assets/fonts/BigNoodleTitling');
+  src:
+       url('assets/fonts/BigNoodleTitling/big_noodle_titling_oblique.ttf') format('truetype'),
+       url('assets/fonts/BigNoodleTitling/big_noodle_titling_oblique.eot') format('eot'),
+       url('assets/fonts/BigNoodleTitling/big_noodle_titling_oblique.svg') format('svg');
+}
+
+html {
+  font-family: 'Ubuntu Condensed', Ariel, Sans-serif;
+  background-color: black;
+  width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Big Noodle Titling Oblique', Ariel, Sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3.5em;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+h4 {
+  font-size: 2.5em;
+}
+
+h5 {
+  font-size: 2em;
+}
+
+h6 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+p.white {
+  font-size: 1em;
+  text-shadow:2px 2px 3px black;
+  color: white;
+}
+
+h1,h3 .white {
+  text-shadow: 2px 2px 3px var(--shadow);
+  color: white;
+}
+
+.no-padding {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.section {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.back-orange {
+  background-color: var(--orange);
+}
+
+.back-blue {
+  background-color: var(--blue);
+}
+
+.back-white {
+  background-color: white;
+}
+
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}
+
+.dark-blue {
+  color: var(--dark-blue);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.grid-container {
+  display: grid;
+}
+
+#vid-video-elements-container {
+  display: grid;
+}
+
+#vid-grid-bottom-elements {
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr auto;
+  height: auto;
+}
+
+#vid-grid-console-elements {
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: 1fr auto
+}
+
+header {
+  transition: all .5s;
+}
+
+nav {
+  background: black;
+  top: 0;
+  width: 100%;
+  transition: all .5s;
+  position: relative;
+  z-index: 100;
+}
+
+.hidden-nav {
+  height: 0;
+  display: none;
+  transition: .5s;
+}
+
+.hero-picture {
+  max-height: 300px;
+  max-width: 300px;
+  display: inline-block;
+}
+
+.hero-title {
+  display: inline-block;
+}
+
+.hero-description {
+  display: inline-block;
+}
+
+.hero-icon {
+  height: 100px;
+  width: 75px;
+  border: solid black 1px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  font-size: 5em;
+}
+
+.hero-selected {
+  background-color: var(--orange);
+  color: black;
+  border: solid var(--blue) 1px;
+}
+
+.hero-information {
+  grid-template-columns: 1fr auto auto 1fr;
+}
+
+#head-nav {
+  overflow-y: hidden;
+  height: 40px;
+	transition: .5s;
+}
+
+#head-floating-nav {
+  left: 10%;
+  background-color: rgba(0, 0, 0, .6);
+  padding: 10px;
+  position: fixed;
+  transition: all 0s;
+  border: 0;
+  margin: auto 0;
+  width: 80%;
+}
+
+#sec-social {
+  background-image: url("assets/images/testing.jpg");
+}
+
+.fixed-nav {
+  position: fixed;
+}
+
+.back-white:hover{
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: solid white 2px;
+  transition: all .2s;
+}
+
+.back-blue:hover {
+  background-color: #36d1ff;
+  transition: all .2s;
+}
+
+.back-orange:hover {
+  background-color: #f4d416;
+  transition: all .2s;
+}
+
+body {
+	padding: 0;
+	margin: 0 auto;
+	color: Black;
+	background-color: var(--grey);
+}
+
+button {
+  display: block;
+  margin: 5px auto;
+  padding: 10px 20px 10px 20px;
+  min-width: 150px;
+  font-weight: bold;
+  font-size: 20px;
+  border-width: 0;
+  border-radius: 3px;
+}
+
+#head-buy {
+  font-size: 12px;
+  padding: auto;
+  min-width: auto;
+  height: 30px;
+  display: inline-block;
+}
+
+.soc-icon {
+  display: inline-block;
+}
+
+.console-item {
+  display: inline-block;
+}
+
+.award-item {
+  display: inline-block;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.center {
+  width: 50%;
+  padding: 10px 10px 10px 10px;
+  background-color: rgba(100, 100, 100, .05);
+  align-content: center;
+  align-self: center;
+  margin: 0 auto;
+}
+
+#background-window {
+  height: 300px;
+  background-image: url("assets/images/back-rolling.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#vid-intro {
+  display: none;
+}
+
+.console-item {
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: 30px;
+  color: #F0F0F0;
+  max-width: 200px;
+}
+
+.award-item {
+  max-width: 200px;
+}
+
+.grid-container {
+  display: grid;
+}
+
+#filler {
+  height: 100px;
+}
+
+#head-main-logo {
+  max-width: 40%;
+}
+
+#vid-intro-substitute {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#grid-head-nav {
+  grid-template-columns: 200px repeat(5, auto) 1fr repeat(2, auto) 200px;
+  line-height: 40px;
+}
+
+#sec-video {
+  width: 100%;
+  position: relative;
+}
+
+#vid-intro-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sec-social {
+  border-top: solid #696969 3px;
+}
+
+#vid-video-elements-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#syn-container {
+  display: grid;
+  grid-auto-rows: 1fr;
+  height: 100%;
+  width: 40%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+#syn-container>button {
+  height: 40px;
+}
+
+#grid-floating-nav {
+  grid-template-columns: repeat(7, auto) 1fr repeat(3, auto);
+}
+
+a {
+  align-self: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none !important;
+}
+
+
+strong {
+  color: var(--dark-blue);
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#ord-grid-container-main {
+  grid-template-columns: 1fr 1.2fr 1fr 1fr;
+}
+
+#ord-game-boxart>img {
+  height: auto;
+  width: 90%;
+}
+
+#ord-game-boxart {
+  grid-template-columns: .75fr 1fr .75fr;
+  grid-gap: 10px;
+}
+
+#esrb-conditions {
+  text-align: left;
+  top: 0;
+}
+
+.esrb>img {
+  height: 100px;
+}
+
+@media (min-width: 992px) {
+  #vid-intro {
+    display: block;
+    max-width: 100%;
+  }
+
+  #vid-intro-substitute {
+    display: none;
+  }
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+#sec-synopsis {
+  height: 600px;
+  background-size: cover;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,1 @@
+<p class="dark-blue">There are no heroes.</p>
